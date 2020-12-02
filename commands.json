@@ -1,0 +1,132 @@
+use passwords
+db.createCollection(`thePasswordsCollection`)
+db.thePasswordsCollection.insert({
+	acct_id: 1,
+	user_id: 1,
+	fname: "Robert",
+	lname: "Venezia",
+	email_addr: "robert@gmail.com",
+	username: "venrob",
+	site_name: "Google",
+	site_url: "https://www.google.com/",
+	password: "1234",
+	comment: null,
+	last_updated: "April 4th, 2020"
+	})
+db.thePasswordsCollection.insert({
+	acct_id: 2,
+	user_id: 1,
+	fname: "Robert",
+	lname: "Venezia",
+	email_addr: "robert@gmail.com",
+	username: "venrob",
+	site_name: "Amazon",
+	site_url: "https://www.amazon.com/",
+	password: "4321",
+	comment: "Subscription - $6.49/mo",
+	last_updated: "October 4th, 2020"
+	})
+db.thePasswordsCollection.insert({
+	acct_id: 3,
+	user_id: 2,
+	fname: "Ed",
+	lname: "Bob",
+	email_addr: "edbob@gmail.com",
+	username: "eddy1234",
+	site_name: "Google",
+	site_url: "https://www.google.com/",
+	password: "1234567",
+	comment: null,
+	last_updated: "January 2nd, 2018"
+	})
+db.thePasswordsCollection.insert({
+	acct_id: 4,
+	user_id: 2,
+	fname: "Ed",
+	lname: "Bob",
+	email_addr: "edward_bob@gmail.com",
+	username: "eddy5678",
+	site_name: "Google",
+	site_url: "https://www.google.com/",
+	password: "9876543",
+	comment: null,
+	last_updated: "February 29th, 2016"
+	})
+db.thePasswordsCollection.insert({
+	acct_id: 5,
+	user_id: 2,
+	fname: "Ed",
+	lname: "Bob",
+	email_addr: "edbob@gmail.com",
+	username: "eddy_dude567",
+	site_name: "Steam",
+	site_url: "https://store.steampowered.com/",
+	password: "87586568",
+	comment: null,
+	last_updated: "June 3rd, 2013"
+	})
+db.thePasswordsCollection.insert({
+	acct_id: 6,
+	user_id: 2,
+	fname: "Ed",
+	lname: "Bob",
+	email_addr: "edward_bob@gmail.com",
+	username: "edbob_2020",
+	site_name: "Github",
+	site_url: "https://github.com/",
+	password: "54375",
+	comment: "For UHart classes",
+	last_updated: "January 25th, 2020"
+	})
+db.thePasswordsCollection.insert({
+	acct_id: 7,
+	user_id: 3,
+	fname: "Sally",
+	lname: "Jacobson",
+	email_addr: "sally@yahoo.com",
+	username: "sally",
+	site_name: "Yahoo",
+	site_url: "https://www.yahoo.com/",
+	password: "sally5",
+	comment: null,
+	last_updated: "September 2nd, 2005"
+	})
+db.thePasswordsCollection.insert({
+	acct_id: 8,
+	user_id: 3,
+	fname: "Sally",
+	lname: "Jacobson",
+	email_addr: "sally@yahoo.com",
+	username: "sally1234",
+	site_name: "Amazon",
+	site_url: "https://www.amazon.com/",
+	password: "sally567",
+	comment: null,
+	last_updated: "July 3rd, 2010"
+	})
+db.thePasswordsCollection.insert({
+	acct_id: 9,
+	user_id: 3,
+	fname: "Sally",
+	lname: "Jacobson",
+	email_addr: "sally@yahoo.com",
+	username: "sally1234",
+	site_name: "Google",
+	site_url: "https://www.google.com/",
+	password: "sally567",
+	comment: null,
+	last_updated: "July 3rd, 2010"
+	})
+db.thePasswordsCollection.insert({
+	acct_id: 10,
+	user_id: 3,
+	fname: "Sally",
+	lname: "Jacobson",
+	email_addr: "sally@yahoo.com",
+	username: "sally1234",
+	site_name: "EBay",
+	site_url: "https://www.ebay.com/",
+	password: "sally56789",
+	comment: null,
+	last_updated: "July 27th, 2011"
+	})
