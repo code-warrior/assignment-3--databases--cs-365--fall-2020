@@ -29,7 +29,7 @@ Convert the MySQL `passwords` database from assignment 1 into a MongoDB database
 ---
 
 ## ❖・Due・❖
-Friday, 4 December 2020, at 8:00 PM.
+Monday, 7 December 2020, at 10:00 PM.
 
 ---
 
