@@ -130,3 +130,40 @@ db.thePasswordsCollection.insert({
 	comment: null,
 	last_updated: "July 27th, 2011"
 	})
+
+db.thePasswordsCollection.insert({
+	acct_id: 11,
+	user_id: 1,
+	fname: "Robert",
+	lname: "Venezia",
+	email_addr: "robert@gmail.com",
+	username: "venrob",
+	site_name: "Steam",
+	site_url: "https://store.steampowered.com/",
+	password: "12345678987654321",
+	comment: null,
+	last_updated: "October 8th, 2020"
+	})
+
+db.thePasswordsCollection.find({"user_id": 1, "site_name": "Amazon"})
+
+db.thePasswordsCollection.find({"site_url": /^https.*/})
+
+db.thePasswordsCollection.updateMany(
+	{"site_name": /Amazon/i},
+	{ $set: {"site_url": "https://smile.amazon.com/"} }
+	)
+
+db.thePasswordsCollection.update(
+	{"user_id": 1, "site_name": /Amazon/i},
+	{ $set: {"password": "foobar"} }
+	)
+
+db.thePasswordsCollection.updateMany(
+	{"site_name": /Steam/i},
+	{ $set: {"site_url": null} }
+	)
+
+db.thePasswordsCollection.remove(
+	{"user_id": 2, "site_name": /Github/i}
+	)
