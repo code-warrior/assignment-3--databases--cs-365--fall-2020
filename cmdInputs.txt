@@ -1,0 +1,29 @@
+db.thePasswordsCollection.insert([
+	{
+		"first_name": "Tyler",
+		"last_name": "Reilly",
+		
+		"websites":
+		[{
+			"Facebook": 
+			[{
+				"website_url": "facebook.com",
+				"https": "1",
+				"website_username": "treilly",
+				"website_email": "abc@123.com",
+				"website_password": "abc123",
+				"comment": "Password for Facebook",
+				"time": "12/3/2020 7:00pm"
+			}],
+			"Twitter":
+			[{
+				"website_url": "twitter.com",
+				"https": "1",
+				"website_username": "treilly",
+				"website_email": "abc@123.com",
+				"website_password": "123abc",
+				"comment": "Password for Twiiter",
+				"time": "12/3/2020 7:05pm"
+			}]
+		}]
+	}])
