@@ -1,0 +1,132 @@
+	use passwords
+	db.createCollection(`thePasswordsCollection`)
+	db.thePasswordsCollection.insert({
+		user_id: 1,
+		fname: "Tyler",
+		lname: "Reilly",
+		email: "treilly@gmail.com",
+		username: "treilly",
+		site_name: "Google",
+		site_url: "google.com",
+		https: 1,
+		password: "abc123",
+		comment: "Password for Google",
+		date: "January 1st, 2009"
+		})
+	db.thePasswordsCollection.insert({
+		user_id: 1,
+		fname: "Tyler",
+		lname: "Reilly",
+		email: "treilly@gmail.com",
+		username: "treilly",
+		site_name: "Amazon",
+		site_url: "amazon.com",
+		https: 1,
+		password: "123abc",
+		comment: "Password for Amazon",
+		date: "February 1st, 2010"
+		})
+	db.thePasswordsCollection.insert({
+		user_id: 2,
+		fname: "Billy",
+		lname: "Willy",
+		email: "bwilly@gmail.com",
+		username: "BillyTheKid",
+		site_name: "Facebook",
+		site_url: "Facebook.com",
+		https: 1,
+		password: "Sillywilly1",
+		comment: "Password for Facebook",
+		date: "March 3rd, 2007"
+		})
+	db.thePasswordsCollection.insert({
+		user_id: 2,
+		fname: "Billy",
+		lname: "Willy",
+		email: "bwilly@hartford.edu",
+		username: "BillyTheKid",
+		site_name: "Google",
+		site_url: "Google.com",
+		https: 1,
+		password: "Billysilly2",
+		comment: "Password for Google",
+		date: "April 16th, 2010"
+		})
+	db.thePasswordsCollection.insert({
+		user_id: 2,
+		fname: "Billy",
+		lname: "Silly",
+		email: "Sbilly@yahoo.com",
+		username: "Bwilly",
+		site_name: "Uhart",
+		site_url: "hartford.edu",
+		https: 1,
+		password: "SillyBilly3",
+		comment: "Password for Uhart self service",
+		date: "June 29th, 2016"
+		})
+	db.thePasswordsCollection.insert({
+		user_id: 2,
+		fname: "Billy",
+		lname: "Willy",
+		email: "Bwilly@gmail.com",
+		username: "BillyTheKid",
+		site_name: "Battle.net",
+		site_url: "Battle.net",
+		https: 1,
+		password: "BillyWilly4",
+		comment: "Password for Battle.net",
+		date: "December 14th, 2008"
+		})
+	db.thePasswordsCollection.insert({
+		user_id: 3,
+		fname: "Steve",
+		lname: "Smith",
+		email: "SSmith@hartford.edu",
+		username: "Smithy",
+		site_name: "Uhart",
+		site_url: "Hartford.edu",
+		https: 1,
+		password: "smithsonian1",
+		comment: "Password for Uhart self service",
+		date: "August 26th, 2017"
+		})
+	db.thePasswordsCollection.insert({
+		user_id: 3,
+		fname: "Steve",
+		lname: "Smith",
+		email: "SSmith@hartford.edu",
+		username: "Smithy",
+		site_name: "Amazon",
+		site_url: "amazon.com",
+		https: 1,
+		password: "Fall2020!",
+		comment: "password for amazon",
+		date: "October 18th, 2017"
+		})
+	db.thePasswordsCollection.insert({
+		user_id: 3,
+		fname: "Steve",
+		lname: "Smith",
+		email: "SSmith@hartford.edu",
+		username: "Smithy",
+		site_name: "Random",
+		site_url: "Random.com/",
+		https: 0,
+		password: "RandomPass1",
+		comment: "Password for Random website",
+		date: "May 22nd, 2025"
+		})
+	db.thePasswordsCollection.insert({
+		user_id: 1,
+		fname: "Tyler",
+		lname: "Reilly",
+		email: "treilly@gmail.com",
+		username: "treilly",
+		site_name: "More Random",
+		site_url: "morerandom.com",
+		https: 0,
+		password: "Idontknow1@",
+		comment: "Password for more random websites",
+		date: "June 29th, 1999"
+		})
