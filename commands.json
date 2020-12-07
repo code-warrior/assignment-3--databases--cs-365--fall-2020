@@ -1,5 +1,9 @@
 use passwords
 
+db.dropDatabase()
+
+use passwords //place focus on passwords database, then drop database, then recreate as empty database. similar to drop if exists
+
 db.createCollection(`thePasswordsCollection`)
 
 db.thePasswordsCollection.insert([
@@ -194,3 +198,33 @@ db.thePasswordsCollection.insert([
 	}]
 }
 ])
+
+//Create a new entry into the database, which already hase your 10 initial entries
+db.thePasswordsCollection.insert([
+    {
+	"id": "10",
+	"account": [{
+		"website": [{
+			"name": "Amazon",
+			"url": "amazon.com",
+			"secure": "TRUE"
+		}],
+		"user": [{
+			"username": "TimAmazon",
+			"password": "TestPass10",
+			"email": "TimEmail123@email.com",
+			"firstName": "Timothy",
+			"lastName": "Kodz",
+			"passwordCreated": "14/03/2017"
+		}],
+		"comment": "Amazon comment"
+	}]
+}])
+
+//Get the password associated with the URL of one of your 10 entries
+db.thePasswordsCollection.find({"id": "3"}, {"account": {"user": {"password": 1}}}).pretty()
+
+//Get all the password-related data, including the password, associated with the URLs that have https in one of your 10 entries
+db.thePasswordsCollection.find({"account.website.secure": "TRUE"}).pretty()
+
+/*Change a URL associated with one of the passwords in your 10 entries*/
