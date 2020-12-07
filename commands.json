@@ -9,193 +9,193 @@ db.createCollection(`thePasswordsCollection`)
 db.thePasswordsCollection.insert([
     {
 	"id": "0",
-	"account": [{
-		"website": [{
+	"account": {
+		"website": {
 			"name": "Facebook",
 			"url": "facebook.com",
 			"secure": "TRUE"
-		}],
-		"user": [{
+		},
+		"user": {
 			"username": "TimFacebook",
 			"password": "TestPass0",
 			"email": "TimEmail123@email.com",
 			"firstName": "Timothy",
 			"lastName": "Kodz",
 			"passwordCreated": "01/02/2003"
-		}],
+		},
 		"comment": "Facebook comment"
-	}]
+	}
 },
 {
 	"id": "1",
-	"account": [{
-		"website": [{
+	"account": {
+		"website": {
 			"name": "Instgram",
 			"url": "instgram.com",
 			"secure": "TRUE"
-		}],
-		"user": [{
+		},
+		"user": {
 			"username": "TimInstagram",
 			"password": "TestPass1",
 			"email": "TimEmail123@email.com",
 			"firstName": "Timothy",
 			"lastName": "Kodz",
 			"passwordCreated": "04/05/2006"
-		}],
+		},
 		"comment": "Instgram comment"
-	}]
+	}
 },
 {
 	"id": "2",
-	"account": [{
-		"website": [{
+	"account": {
+		"website": {
 			"name": "Twitter",
 			"url": "twitter.com",
 			"secure": "TRUE"
-		}],
-		"user": [{
+		},
+		"user": {
 			"username": "TimTwitter",
 			"password": "TestPass2",
 			"email": "TimEmail123@email.com",
 			"firstName": "Timothy",
 			"lastName": "Kodz",
 			"passwordCreated": "07/08/2009"
-		}],
+		},
 		"comment": "Twitter comment"
-	}]
+	}
 },
 {
 	"id": "3",
-	"account": [{
-		"website": [{
+	"account": {
+		"website": {
 			"name": "Tumblr",
 			"url": "tumblr.com",
 			"secure": "TRUE"
-		}],
-		"user": [{
+		},
+		"user": {
 			"username": "TimTumblr",
 			"password": "TestPass3",
 			"email": "TimEmail123@email.com",
 			"firstName": "Timothy",
 			"lastName": "Kodz",
 			"passwordCreated": "10/11/2012"
-		}],
+		},
 		"comment": "Tumblr comment"
-	}]
+	}
 },
 {
 	"id": "4",
-	"account": [{
-		"website": [{
+	"account": {
+		"website": {
 			"name": "LinkedIn",
 			"url": "linkedin.com",
 			"secure": "TRUE"
-		}],
-		"user": [{
+		},
+		"user": {
 			"username": "TimLinkedIn",
 			"password": "TestPass1",
 			"email": "TimEmail123@email.com",
 			"firstName": "Timothy",
 			"lastName": "Kodz",
 			"passwordCreated": "30/12/2019"
-		}],
+		},
 		"comment": "LinkedIn comment"
-	}]
+	}
 },
 {
 	"id": "5",
-	"account": [{
-		"website": [{
+	"account": {
+		"website": {
 			"name": "WikiDot",
 			"url": "wikidot.com",
 			"secure": "FALSE"
-		}],
-		"user": [{
+		},
+		"user": {
 			"username": "TimWikiDot",
 			"password": "TestPass5",
 			"email": "TimEmail123@email.com",
 			"firstName": "Timothy",
 			"lastName": "Kodz",
 			"passwordCreated": "25/06/2016"
-		}],
+		},
 		"comment": "WikiDot comment"
-	}]
+	}
 },
 {
 	"id": "6",
-	"account": [{
-		"website": [{
+	"account": {
+		"website": {
 			"name": "Reddit",
 			"url": "reddit.com",
 			"secure": "TRUE"
-		}],
-		"user": [{
+		},
+		"user": {
 			"username": "TimReddit",
 			"password": "TestPass6",
 			"email": "TimEmail123@email.com",
 			"firstName": "Timothy",
 			"lastName": "Kodz",
 			"passwordCreated": "19/08/2006"
-		}],
+		},
 		"comment": "Reddit comment"
-	}]
+	}
 },
 {
 	"id": "7",
-	"account": [{
-		"website": [{
+	"account": {
+		"website": {
 			"name": "Mix",
 			"url": "mix.com",
 			"secure": "TRUE"
-		}],
-		"user": [{
+		},
+		"user": {
 			"username": "TimMix",
 			"password": "TestPass7",
 			"email": "TimEmail123@email.com",
 			"firstName": "Timothy",
 			"lastName": "Kodz",
 			"passwordCreated": "12/10/2015"
-		}],
+		},
 		"comment": "Mix comment"
-	}]
+	}
 },
 {
 	"id": "8",
-	"account": [{
-		"website": [{
+	"account": {
+		"website": {
 			"name": "MyShopify",
 			"url": "myshopify.com",
 			"secure": "FALSE"
-		}],
-		"user": [{
+		},
+		"user": {
 			"username": "TimMyShopify",
 			"password": "TestPass8",
 			"email": "TimEmail123@email.com",
 			"firstName": "Timothy",
 			"lastName": "Kodz",
 			"passwordCreated": "03/06/2009"
-		}],
+		},
 		"comment": "MyShopify comment"
-	}]
+	}
 },
 {
 	"id": "9",
-	"account": [{
-		"website": [{
+	"account": {
+		"website": {
 			"name": "UofWashington",
 			"url": "washington.edu",
 			"secure": "FALSE"
-		}],
-		"user": [{
+		},
+		"user": {
 			"username": "TimUofWashington",
 			"password": "TestPass9",
 			"email": "TimEmail123@email.com",
 			"firstName": "Timothy",
 			"lastName": "Kodz",
 			"passwordCreated": "23/07/2018"
-		}],
+		},
 		"comment": "UofWashington comment"
-	}]
+	}
 }
 ])
 
@@ -203,22 +203,22 @@ db.thePasswordsCollection.insert([
 db.thePasswordsCollection.insert([
     {
 	"id": "10",
-	"account": [{
-		"website": [{
+	"account": {
+		"website": {
 			"name": "Amazon",
 			"url": "amazon.com",
 			"secure": "TRUE"
-		}],
-		"user": [{
+		},
+		"user": {
 			"username": "TimAmazon",
 			"password": "TestPass10",
 			"email": "TimEmail123@email.com",
 			"firstName": "Timothy",
 			"lastName": "Kodz",
 			"passwordCreated": "14/03/2017"
-		}],
+		},
 		"comment": "Amazon comment"
-	}]
+	}
 }])
 
 //Get the password associated with the URL of one of your 10 entries
