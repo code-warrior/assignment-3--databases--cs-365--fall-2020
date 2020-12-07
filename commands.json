@@ -227,4 +227,8 @@ db.thePasswordsCollection.find({"id": "3"}, {"account": {"user": {"password": 1}
 //Get all the password-related data, including the password, associated with the URLs that have https in one of your 10 entries
 db.thePasswordsCollection.find({"account.website.secure": "TRUE"}).pretty()
 
-/*Change a URL associated with one of the passwords in your 10 entries*/
+//Change a URL associated with one of the passwords in your 10 entries
+db.thePasswordsCollection.update({"id": "2"}, {$set: {"account.website.url": "twitternewurl.com"}})
+
+//Change any password
+db.thePasswordsCollection.update({"id": "8"}, {$set: {"account.user.password": "NewPass8"}})
