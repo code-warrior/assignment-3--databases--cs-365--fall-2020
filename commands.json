@@ -232,3 +232,9 @@ db.thePasswordsCollection.update({"id": "2"}, {$set: {"account.website.url": "tw
 
 //Change any password
 db.thePasswordsCollection.update({"id": "8"}, {$set: {"account.user.password": "NewPass8"}})
+
+//Remove a URL
+db.thePasswordsCollection.update({"id": "2"}, {$unset: {"account.website.url": ""}})
+
+//Remove a password
+db.thePasswordsCollection.deleteOne({"id": "5"})
