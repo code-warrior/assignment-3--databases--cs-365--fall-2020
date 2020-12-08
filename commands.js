@@ -26,14 +26,14 @@ db.thePasswordsCollection.insertMany([
         lastModified: new Date().toISOString()
     },
     {
-        siteUrl: "http://blackboard.hartford.edu/",
-        siteName: "UHart Blackboard",
-        userName: "keagleson",
+        siteUrl: "http://reddit.com/",
+        siteName: "Reddit",
+        userName: "keag",
         userFirstName: "Keith",
         userLastName: "Eagleson",
-        userEmail: "keagleson@hartford.edu",
+        userEmail: "keagleson23@hartford.edu",
         userPassword: "12345678",
-        userComment: "UHart Blackboard account.",
+        userComment: "Reddit account.",
         lastModified: new Date().toISOString()
     },
     {
@@ -45,6 +45,72 @@ db.thePasswordsCollection.insertMany([
         userEmail: "obscureemail@gmail.com",
         userPassword: "12dsafdsa!3",
         userComment: "Practice PenTesting.",
+        lastModified: new Date().toISOString()
+    },
+    {
+        siteUrl: "https://facebook.com/",
+        siteName: "Facebook",
+        userName: "keith",
+        userFirstName: "Keith",
+        userLastName: "Eagleson",
+        userEmail: "keagleson28@gmail.com",
+        userPassword: "12dsafdsa!3",
+        userComment: "Delete Facebook.",
+        lastModified: new Date().toISOString()
+    },
+    {
+        siteUrl: "https://steam.com/",
+        siteName: "Steam",
+        userName: "keithEagles",
+        userFirstName: "Keith",
+        userLastName: "Eagleson",
+        userEmail: "keagleson28@gmail.com",
+        userPassword: "12dsafdsa!3",
+        userComment: "Play video games, waste time.",
+        lastModified: new Date().toISOString()
+    },
+    {
+        siteUrl: "https://twitter.com/",
+        siteName: "Twitter",
+        userName: "keithEagles",
+        userFirstName: "Keith",
+        userLastName: "Eagleson",
+        userEmail: "keagleson28@gmail.com",
+        userPassword: "1!3",
+        userComment: "Tweet.",
+        lastModified: new Date().toISOString()
+    },
+    {
+        siteUrl: "https://ign.com/",
+        siteName: "IGN",
+        userName: "kei",
+        userFirstName: "Keith",
+        userLastName: "Eagleson",
+        userEmail: "keagleson28@gmail.com",
+        userPassword: "1!3asd",
+        userComment: "Reviews.",
+        lastModified: new Date().toISOString()
+    },
+    {
+        siteUrl: "http://keagleson.dev/",
+        siteName: "Personal Site",
+        userName: "kei",
+        userFirstName: "Keith",
+        userLastName: "Eagleson",
+        userEmail: "keagleson28@gmail.com",
+        userPassword: "1!3asdaxa",
+        userComment: "My portfolio site.",
+        lastModified: new Date().toISOString()
+    },
+    {
+        siteUrl: "https://gamespot.com/",
+        siteName: "Gamespot",
+        userName: "keithGames",
+        userFirstName: "Keith",
+        userLastName: "Eagleson",
+        userEmail: "keagleson28@gmail.com",
+        userPassword: "1!3asdasdf",
+        userComment: "Game review site.",
         lastModified: new Date().toISOString()
     }
 ]);
