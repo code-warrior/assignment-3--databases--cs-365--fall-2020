@@ -3,14 +3,14 @@ db.thePasswordsCollection.insert({
 	user_id: 1,
 	fname: "Tyler",
 	lname: "Reilly",
-	email_addr: "treilly@gmail.com",
+	email: "treilly@gmail.com",
 	username: "treilly",
 	site_name: "myspace",
 	site_url: "myspace.com",
 	https: 1,
 	password: "Whostillusesmyspace?",
 	comment: "Password for MySpace",
-	last_updated: "January 1st, 2009"
+	date: "January 1st, 2009"
 	})
 
 //GET password for google.com from user_id 1
