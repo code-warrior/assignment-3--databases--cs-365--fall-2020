@@ -1,0 +1,31 @@
+Assignment 3
+Programmer: Erik Rodriguez
+Date: 12/7/2020
+Purpose: To convert XML to JSON using MongoDB, Used MongoDB university to assist in writing commands and dump BSON file. Please use the provided info inputted already or replace with new info.
+
+Create a entry:
+db.thePasswordsCollection.insert({
+  "User_first":"Brian",
+  "User_last":"O'Conner",
+  "User_email":"O'ConnerB@gmail.com",
+  "Website_name":"Facebook",
+  "Website_url":"https://www.facebook.com/",
+  "Username":"PaulWalker",
+  "Password":"CarK3ys1223",
+  "Time_created":new Timestamp(),
+  "Comment":"To monitor social media."})
+
+Get the password from one of the entries:
+db.thePasswordsCollection.find({"Website_name": "Advanced Auto Parts"},{"Password":1}).pretty()
+
+Get all password info:
+db.thePasswordsCollection.find({"Website_url": {$regex:/^https/}}).pretty()
+
+Change a URL:
+db.thePasswordsCollection.updateOne({"Website_name": "Car-Part" }, { "$set": { "Website_url": "https://www.carpart.com/"}})
+
+Change a password:
+db.thePasswordsCollection.updateOne({"Website_name": "Milwaukee Tools" }, { "$set": { "Password": "Wr3nch3s"}})
+
+Remove a password:
+db.thePasswordsCollection.deleteOne({ "Website_name": "Automotive Forums"},{"Password": 1})
