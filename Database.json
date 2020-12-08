@@ -1,11 +1,11 @@
-db.thePasswordsCollection.insert([
+{"passwords":[
   { "user1" : {
     "user" : {
       "name" :
-        {
-          "first": "Isaiah",
-          "last": "Johnson"
-        },
+      {
+        "first": "Isaiah",
+        "last": "Johnson"
+      },
       "email" : "IsaiahJ3@gmail.com"
     },
     "login_information" : {
@@ -23,9 +23,9 @@ db.thePasswordsCollection.insert([
   { "user2" : {
     "user" : {
       "name" :
-        { "first": "Isaiah",
-          "last": "Johnson"
-        },
+      { "first": "Isaiah",
+        "last": "Johnson"
+      },
       "email" : "IsaiahJ3@gmail.com"
     },
     "login_information" : {
@@ -43,9 +43,9 @@ db.thePasswordsCollection.insert([
   { "user3" : {
     "user" : {
       "name" :
-        { "first": "Isaiah",
-          "last": "Johnson"
-        },
+      { "first": "Isaiah",
+        "last": "Johnson"
+      },
       "email" : "IsaiahJ3@gmail.com"
     },
     "login_information" : {
@@ -63,9 +63,9 @@ db.thePasswordsCollection.insert([
   { "user4" : {
     "user" : {
       "name" :
-        { "first": "Isaiah",
-          "last": "Johnson"
-        },
+      { "first": "Isaiah",
+        "last": "Johnson"
+      },
       "email" : "IsaiahJ3@gmail.com"
     },
     "login_information" : {
@@ -82,9 +82,9 @@ db.thePasswordsCollection.insert([
   {"user5" : {
     "user" : {
       "name" :
-        { "first": "Isaiah",
-          "last": "Johnson"
-        },
+      { "first": "Isaiah",
+        "last": "Johnson"
+      },
       "email" : "IsaiahJ3@gmail.com"
     },
     "login_information" : {
@@ -102,9 +102,9 @@ db.thePasswordsCollection.insert([
   { "user6" : {
     "user" : {
       "name" :
-        { "first": "Isaiah",
-          "last": "Johnson"
-        },
+      { "first": "Isaiah",
+        "last": "Johnson"
+      },
       "email" : "IsaiahJ3@gmail.com"
     },
     "login_information" : {
@@ -122,9 +122,9 @@ db.thePasswordsCollection.insert([
   { "user7" : {
     "user" : {
       "name" :
-        { "first": "Isaiah",
-          "last": "Johnson"
-        },
+      { "first": "Isaiah",
+        "last": "Johnson"
+      },
       "email" : "IsaiahJ3@gmail.com"
     },
     "login_information" : {
@@ -142,9 +142,9 @@ db.thePasswordsCollection.insert([
   { "user8" : {
     "user" : {
       "name" :
-        { "first": "Isaiah",
-          "last": "Johnson"
-        },
+      { "first": "Isaiah",
+        "last": "Johnson"
+      },
       "email" : "IsaiahJ3@gmail.com"
     },
     "login_information" : {
@@ -162,9 +162,9 @@ db.thePasswordsCollection.insert([
   { "user9" : {
     "user" : {
       "name" :
-        { "first": "Isaiah",
-          "last": "Johnson"
-        },
+      { "first": "Isaiah",
+        "last": "Johnson"
+      },
       "email" : "IsaiahJ3@gmail.com"
     },
     "login_information" : {
@@ -182,9 +182,9 @@ db.thePasswordsCollection.insert([
   { "user10" : {
     "user" : {
       "name" :
-        { "first": "Isaiah",
-          "last": "Johnson"
-        },
+      { "first": "Isaiah",
+        "last": "Johnson"
+      },
       "email" : "IsaiahJ3@gmail.com"
     },
     "login_information" : {
@@ -199,4 +199,5 @@ db.thePasswordsCollection.insert([
     }
   }
   }
-])
+]
+}
