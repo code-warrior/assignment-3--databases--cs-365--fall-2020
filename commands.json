@@ -1,0 +1,22 @@
+->Create New Entry
+db.thePasswordsCollection.insert(
+{"user":{"firstName":"Johnny", "lastName":"Rose"},
+"account":{ "websiteName":"Instagram", "websiteURL":"https://www.instagram.com/", "username":"davidrose","email":"johnny@gmail.com", "password":"money", "comment":"Johnnys's personal Insta"},
+"timestamp":new Timestamp()}
+)
+
+
+->Get Passwords associated with URL
+db.thePasswordsCollection.find({"account.websiteURL":"https://www.instagram.com/"},{"account.password":1}).pretty()
+
+->Get all password related data from https
+db.thePasswordsCollection.find({"account.websiteURL":{$regex : /^https/}}).pretty()
+
+->Change URL
+db.thePasswordsCollection.updateOne({"account.websiteURL":"http://www.mit.edu/"},{"$set": {"account.websiteURL":"https://www.mit.edu/"}})
+
+->Change Password
+db.thePasswordsCollection.updateOne({"account.websiteName":"Instagram", "account.username":"davidrose"},{"$set": {"account.password":"newpassword"}})
+
+->remove a password
+db.thePasswordsCollection.deleteOne({"user.firstName": "David", "account.websiteName":"Instagram", "account.username":"davidrose"})
