@@ -1,24 +1,17 @@
-{"passwords":[{
-  "user1": {
+{"user table":[{
     "user": {
       "name": {
         "first": "Isaiah",
         "last": "Johnson"
       },
       "email": "IsaiahJ3@gmail.com"
-    },
-    "login_information": {
-      "username": "Ij123" ,
-      "websiteName": "Google" ,
-      "URL": "https://www.google.com" ,
-      "comment": "Google"
-    },
-    "password": {
-      "passwordForWebsite": "IJohnson345" ,
-      "passwordcreated": "Feb2020"
+    }}],
+
+
+
     }
   }
-  },
+},
   { "user2": {
     "user": {
       "name": {
@@ -35,7 +28,7 @@
     },
     "password": {
       "passwordForWebsite": "J0hnson1",
-      "passwordcreated": "Jan2018"
+      "passwordcreated": "Jun2020"
     }
   }
   },
@@ -55,7 +48,7 @@
     },
     "password": {
       "passwordForWebsite": "I$a1ah45",
-      "passwordcreated": "Jun2016"
+      "passwordcreated": "Jun2020"
     }
   }
   },
@@ -75,7 +68,7 @@
     },
     "password": {
       "passwordForWebsite": "2020IJohn",
-      "passwordcreated": "Jul2012"
+      "passwordcreated": "Jun2020"
     }
   }},
   {"user5": {
@@ -94,7 +87,7 @@
     },
     "password" : {
       "passwordForWebsite": "19793674",
-      "passwordcreated": "Sep2016"
+      "passwordcreated": "Jun2020"
     }
   }
   },
@@ -114,7 +107,7 @@
     },
     "password": {
       "passwordForWebsite": "John$onzo0m",
-      "passwordcreated": "Mar2020"
+      "passwordcreated": "Jun2020"
     }
   }
   },
@@ -134,7 +127,7 @@
     },
     "password": {
       "passwordForWebsite": "Isaiah$g1thub",
-      "passwordcreated": "Jan2019"
+      "passwordcreated": "Jun2020"
     }
   }
   },
@@ -154,7 +147,7 @@
     },
     "password": {
       "passwordForWebsite": "Icode357",
-      "passwordcreated": "Sep2014"
+      "passwordcreated": "Jun2020"
     }
   }
   },
@@ -174,7 +167,7 @@
     },
     "password": {
       "passwordForWebsite": "Ch@tisa1ah",
-      "passwordcreated": "Oct2017"
+      "passwordcreated": "Jun2020"
     }
   }
   },
@@ -194,7 +187,7 @@
     },
     "password": {
       "passwordForWebsite": "J0hn$ons3arch",
-      "passwordcreated": "Nov2016"
+      "passwordcreated": "Jun2020"
     }
   }
   }
