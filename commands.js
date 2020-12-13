@@ -1,7 +1,7 @@
 const db = "passwords";
 const database = db.getSiblingDB(db);
-myObjectId = ObjectId("5fd2503f8b8bef95c4eaafef");
-database.thePasswordsCollection.update({"password.passwordcreated":ObjectId(myObjectId).getTimestamp()});
+myObjectId = ObjectId("5fd2503f8b8bef95c4eaafef").toString();
+database.thePasswordsCollection.update({"password.passwordcreated":myObjectId});
 database.thePasswordsCollection.insert({"_id":ObjectId("5fd2503f8b8bef95c4eaaff9"),"login_information":{"username":"IJohn346","websiteName":"ESPN","URL":"https://www.espn.com", "comment": ""},"password":{"passwordForWebsite":"IsaiahSports10","passwordcreated":ObjectId(myObjectId).getTimestamp()}});
 database.thePasswordsCollection.find({"password.passwordForWebsite": "I$a1ah45"}, {"password.passwordForWebsite": 1,"_id": 0}).pretty();
 database.thePasswordsCollection.find({"login_information.URL": "https://www.google.com"}, {"password.passwordForWebsite": 1, "login_information.websiteName": 1, "login_information.comment": 1, "login_information.username": 1, "login_information.URL": 1, "password.passwordcreated": 1, "_id": 0}).pretty();
