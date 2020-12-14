@@ -1,1 +1,6 @@
-db = new Mongo.getDB("passwords"); db.createCollection("thePasswordsCollection"); db.thePasswordsCollection.insert({});
+db = new Mongo.getDB("passwords"); db.createCollection("thePasswordsCollection"); 
+  
+  
+show collections;
+  
+db.thePasswordsCollection.insert( {});
