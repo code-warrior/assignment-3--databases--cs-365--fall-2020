@@ -1,6 +1,25 @@
-db = new Mongo.getDB("passwords"); db.createCollection("thePasswordsCollection"); 
-  
-  
+db = new Mongo.getDB("passwords"); 
+db.createCollection("thePasswordsCollection"); 
 show collections;
-  
-db.thePasswordsCollection.insert( {});
+db.thePasswordsCollection.insert( 
+{
+"3":{
+    "_id": "3",
+    "login": {
+      "username": "user",
+      "password": "pass",
+      "modified": "-"
+    },
+    "pInfo": {
+      "fname": "username",
+      "lname": "userlast",
+      "email": "asdfadfgf@gmail.com"
+    },
+    "site": {
+      "protocol": "http",
+      "url": "secure-secure-secure.com",
+      "sitename": "Nothing",
+      "comment": "secure"
+    }
+  }
+});
