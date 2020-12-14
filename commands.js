@@ -15,3 +15,32 @@ db.thePasswordsCollection.insertMany([
   { site: {url: "https://www.nytimes.com/", website: "The New York Times"}, username: "potterhead1010", email: "my2ndEmail@hotmail.com", password: "1000wordpday", date: new Date() },
   { site: {url: "https://www.glassdoor.com/index.htm", website: "glassdoor"}, username: "amandaLiang", email: "my2ndEmail@hotmail.com", password: "definitelyFAk3", date: new Date() }
 ])
+
+// Insert to pre-existing database
+db.thePasswordsCollection.insertOne(
+  {
+    site: {
+      url: "https://www.facebook.com/",
+      website: "facebook"
+    },
+    username: "killingmockingjays",
+    email: "my2ndEmail@hotmail.com",
+    password: "2bORnot2b",
+    date: new Date()
+  }
+);
+
+// Get password associated with one of the urls
+db.thePasswordsCollection.find({"site.url": "https://www.minecraft.net/"}, {_id: false, password: true});
+
+// Get all pasword-related data associated with one of the urls containing "https"
+db.thePasswordsCollection.findOne({"site.url": { $regex:"^https"}});
+
+// Change a URL associated with one of the passwords in one of the entries
+db.thePasswordsCollection.updateMany({"site.url": "https://www.audible.com/"}, {$set: {"site.url":"https://www.amazon.com/"} });
+
+// Change an entry's password
+db.thePasswordsCollection.updateOne({"site.url": "https://github.com/"}, {$set: {"password": "definitelyN0TFAk3"} });
+
+// Remove a password
+db.thePasswordsCollection.deleteOne({"site.url": "https://www.glassdoor.com/index.htm", "username": "amandaLiang", "password": "definitelyFAk3"});
