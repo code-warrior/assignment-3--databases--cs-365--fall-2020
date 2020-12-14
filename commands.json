@@ -238,3 +238,6 @@ db.thePasswordsCollection.update({"id": "2"}, {$unset: {"account.website.url": "
 
 //Remove a password
 db.thePasswordsCollection.deleteOne({"id": "5"})
+
+//Dump database to dump folder
+mongodump.exe --db passwords --out C:\Users\tpark\OneDrive\Documents\GitHub\assignment-3--databases--cs-365--fall-2020\dump
