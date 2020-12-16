@@ -1,0 +1,159 @@
+use passwords
+db.createCollection('thePasswordsCollection')
+
+db.thePasswordsCollection.insert([
+  {
+    "website_id": 1,
+    "website_name": "Facebook",
+    "url": "https://www.facebook.com",
+    "account_id": 1,
+    "first_name": "Darth",
+    "last_name": "Vader",
+    "email": "dvader@hotmail.com",
+    "username": "vdarth",
+    "password": "thedarkside",
+    "comment": "social media",
+    "time_stamp": "2015-02-17"
+  },
+  {
+    "website_id": 2,
+    "website_name": "yourmorals.org",
+    "url": "http://www.yourmorals.org",
+    "account_id": 1,
+    "first_name": "Vladimer",
+    "last_name": "Vasilivich",
+    "email": "vlad@mail.ru",
+    "username": "vasilivich95",
+    "password": "E8&7&@Gds6",
+    "comment": "learn about your own morality",
+    "time_stamp": "2020-05-19"
+  },
+  {
+    "website_id": 3,
+    "website_name": "LeetCode",
+    "url": "https://leetcode.com",
+    "account_id": 1,
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "smith90@hotmail.com'",
+    "username": "genericsmith",
+    "password": "P3J1I3TL$j",
+    "comment": "learning management system",
+    "time_stamp": "2018-09-13"
+  },
+  {
+    "website_id": 4,
+    "website_name": "Blackboard",
+    "url": "https://blackboard.hartford.edu",
+    "account_id": 1,
+    "first_name": "Daniel",
+    "last_name": "Baqaeen",
+    "email": "dbaqaeen@nothing.com",
+    "username": "danb",
+    "password": "weakpassword",
+    "comment": "learning management system",
+    "time_stamp": "2017-05-17"
+  },
+  {
+    "website_id": 5,
+    "website_name": "Linkedin",
+    "url": "https://www.linkedin.com",
+    "account_id": 1,
+    "first_name": "Alex",
+    "last_name": "Romino",
+    "email": "alexr@gmail.com",
+    "username": "alexro",
+    "password": "&aL^8b3Mhn",
+    "comment": "professional networking",
+    "time_stamp": "2019-11-21"
+  },
+  {
+    "website_id": 6,
+    "website_name": "bhphotovideo",
+    "url": "http://www.bhphotovideo.com",
+    "account_id": 1,
+    "first_name": "Luke",
+    "last_name": "Skywalker",
+    "email": "skywalker@starwars.com",
+    "username": "forcebalancer",
+    "password": "skywalker1995",
+    "comment": "electronic store",
+    "time_stamp": "2013-09-12"
+  },
+  {
+    "website_id": 7,
+    "website_name": "GitHub",
+    "url": "https://github.com",
+    "account_id": 1,
+    "first_name": "Dan",
+    "last_name": "Viktorov",
+    "email": "vikt.dan@test.com",
+    "username": "dancoder",
+    "password": "easilyhackable",
+    "comment": "task management and collabortion",
+    "time_stamp": "2018-01-13"
+  },
+  {
+    "website_id": 8,
+    "website_name": "Chegg",
+    "url": "https://www.chegg.com",
+    "account_id": 1,
+    "first_name": "Boba",
+    "last_name": "Fett",
+    "email": "dboba@bounty.com",
+    "username": "fettboba",
+    "password": "39TA&JqZy9",
+    "comment": "book buying/renting and tutoring",
+    "time_stamp": "2018-09-13"
+  },
+  {
+    "website_id":9,
+    "website_name": "Dominos",
+    "url": "https://dominos.com",
+    "account_id": 1,
+    "first_name": "Han",
+    "last_name": "Solo",
+    "email": "embaressingchildhoodemail@yahoo.com",
+    "username": "chewbacca",
+    "password": "notsecurepassword",
+    "comment": "fast food",
+    "time_stamp": "2020-11-11"
+  },
+  {
+    "website_id": 10,
+    "website_name": "Twitter",
+    "url": "https://twitter.com",
+    "account_id": 1,
+    "first_name": "Kevin",
+    "last_name": "Solenzo",
+    "email": "kevinsmart@outlook.com",
+    "username": "solenzo82",
+    "password": "hvLsv3#@5d",
+    "comment": "social media",
+    "time_stamp": "2017-06-23"
+  }
+ ])
+
+mongoexport --collection=thePasswordsCollection --db=passwords --out=passwords.json
+mongodump --db passwords --collection thePasswordsCollection
+
+db.thePasswordsCollection.insert(
+  {
+    "website_id": 11,
+    "website_name": "Netflix",
+    "url": "https://www.netflix.com",
+    "account_id": 1,
+    "first_name": "Leech",
+    "last_name": "Von",
+    "email": "leecher@gmail.com",
+    "username": "vleech",
+    "password": "L^6lQ8KpYh",
+    "comment": "streaming",
+    "time_stamp": "2015-04-17"
+  })
+
+db.thePasswordsCollection.find({"url":"https://github.com"} , {password : 1, _id:0})
+db.thePasswordsCollection.find({"url":/^https/} , {_id:0, website_id:0, account_id:0, time_stamp:0, comment:0 }).limit(1).pretty()
+db.thePasswordsCollection.update({"website_name": "Facebook" }, {$set: {"url":"http://www.facebook.com/login"}})
+db.thePasswordsCollection.update({"website_id": 8, "account_id":1 }, {$set:{"password":"thisisanewpassword"}})
+db.thePasswordsCollection.deleteOne({"website_id": 10, "account_id":1 })
