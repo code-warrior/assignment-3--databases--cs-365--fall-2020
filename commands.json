@@ -1,0 +1,104 @@
+mongoexport --uri="mongodb+srv://m001-student:m001-mongodb-basics@sandbox.-----.mongodb.net/passwords" --collection=thePasswordsCollection --out=test.JSON
+mongodump --uri="mongodb+srv://m001-student:m001-mongodb-basics@sandbox.-----.mongodb.net/passwords"
+mongo "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.-----.mongodb.net/passwords"
+
+
+// Create a new entry into the database, which already has your 10 initial entries
+// using the timestamp function, generated a timestamp that matched the timestamp generated // by the mongodb type
+
+db.thePasswordsCollection.insert({
+        "User" : {
+                "FirstName" : "Damien",
+                "LastName" : "Wayne"
+        },
+        "Site" : {
+                "Name" : "Instagram",
+                "Website" : "www.instagram.com"
+        },
+        "Account" : {
+                "username" : "rob4",
+                "email" : "dwayne@gmail.com",
+                "password" : "mydadisbatman",
+                "comment" : "Damian Waynes Instagram account"
+        },
+        "timestamp" : new Timestamp()
+})
+
+
+
+//
+// Get the password associated with the URL of one of your 10 entries
+//
+
+db.thePasswordsCollection.find(
+	{
+	"Site.website":"https://drive.google.com/"
+	},
+	{
+	"Account.password":true
+	}
+).pretty()
+
+
+
+//
+// Get all the password-related data, including the password, associated with URLs that have // https in one of your 10 entries
+// Option x ignores whitespace(just to be safe), ^ starts at the begining
+//
+
+db.thePasswordsCollection.find(
+	{
+	"Site.Website":{$regex: /^https/, $options: 'x'}
+	}
+).pretty()
+
+
+
+//
+// Change a URL associated with one of the passwords in your 10 entries
+// includeing only the website and the username should ensure a unique entry since a website should not allow more // than one account with a username
+//
+
+db.thePasswordsCollection.updateOne(
+	{
+	"Site.Name":"Instagram",
+	"Account.username":"rob4"
+	},
+	{"$set":{"Site.website":"randomwebsite.com"}}
+)
+
+
+
+//
+// Change any entry’s password
+//
+
+db.thePasswordsCollection.updateOne(
+	{
+	"Site.Name":"Instagram",
+	"Account.username":"rob4"
+	},
+	{"$set":{"Account.password":"funnewpassword"}}
+)
+
+
+
+// 
+// Remove a password
+//
+
+db.thePasswordsCollection.deleteOne(
+	{
+	"Site.Name":"Instagram",
+	"Account.username":"rob4"
+	}
+)
+
+
+
+//
+// Returns the timestamp of the given objectID
+// 
+
+ObjectId("5fc597830a1e0a7bca2fded2").getTimestamp()
+
