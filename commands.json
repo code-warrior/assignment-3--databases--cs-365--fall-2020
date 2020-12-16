@@ -1,0 +1,62 @@
+use passwords;
+show collections;
+db.thePasswordsCollection.insertMany( 
+[{
+      "id": "0",
+      "username": "test123",
+      "password": "testing123",
+      "modified": "-",
+      "fname": "Brandon",
+      "lname": "Spada",
+      "email": "test@gmail.nz",
+      "protocol": "https",
+      "url": "youtube.com",
+      "sitename": "Youtube",
+      "comment": "videos"
+  },
+  {
+      "id": "1",
+      "username": "test123",
+      "password": "abc123",
+      "modified": "-",
+      "fname": "John",
+      "lname": "Smith",
+      "email": "another@gmail.nz",
+      "protocol": "https",
+      "url": "facebook.com",
+      "sitename": "Facebook",
+      "comment": "social media"
+  },
+  {
+      "id": "2",
+      "username": "abcdefg",
+      "password": "hijklmnop",
+      "modified": "-",
+      "fname": "First",
+      "lname": "Last",
+      "email": "Last@first.co",
+      "protocol": "https",
+      "url": "firstlast.com",
+      "sitename": "firstlast",
+      "comment": "-"
+    }	,
+	{
+	  "id":"4",
+      "username": "user",
+      "password": "pass",
+      "modified": "-",
+      "fname": "username",
+      "lname": "userlast",
+      "email": "asdfadfgf@gmail.com",
+      "protocol": "http",
+      "url": "secure-secure-secure.com",
+      "sitename": "Nothing",
+      "comment": "secure"
+  }]
+);
+db.thePasswordsCollection.find();
+db.thePasswordsCollection.find({"url":"secure-secure-secure.com"},{password:1});
+db.thePasswordsCollection.find({"protocol":"https"},{email:1,user:1,password:1});
+db.thePasswordsCollection.update({"password":"abc123"},{$set:{url:"yahoo.com"}});
+db.thePasswordsCollection.update({"sitename":"Facebook"},{$set:{password:"bca213"}});
+db.thePasswordsCollection.update({"sitename":"Facebook"},{$set:{password:null}});
