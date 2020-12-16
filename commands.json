@@ -1,0 +1,37 @@
+//insert new document
+db.thePasswordsCollection.insert({
+	user_id: 1,
+	fname: "Tyler",
+	lname: "Reilly",
+	email: "treilly@gmail.com",
+	username: "treilly",
+	site_name: "myspace",
+	site_url: "myspace.com",
+	https: 1,
+	password: "Whostillusesmyspace?",
+	comment: "Password for MySpace",
+	date: "January 1st, 2009"
+	})
+
+//GET password for google.com from user_id 1
+db.thePasswordsCollection.find({"user_id": 1, "site_url": "google.com"}, {"password": 1})
+
+//GET all password related data from URL's with https
+db.thePasswordsCollection.find({"https": 1})
+
+//Update all sites with name Uhart and change their URL to Uhart.com and change the https flag to 0
+db.thePasswordsCollection.update(
+	{"site_name": /Uhart/i},
+	{ $set: {"site_url": "Uhart.com", "https": 0} }
+	)
+
+//Update password for Amazon for user_id 3
+db.thePasswordsCollection.update(
+	{"user_id": 2, "site_name": /Facebook/i},
+	{ $set: {"password": "theyllneverguessthis"} }
+	)
+
+//Remove random
+db.thePasswordsCollection.remove(
+	{"user_id": 3, "site_name": /Random/i}
+	)

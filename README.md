@@ -19,12 +19,12 @@ Convert the MySQL `passwords` database from assignment 1 into a MongoDB database
 * If using spaces, indent by 2.
 * Copy and translate all entries used to populate the original MySQL database.
 * As in the first assignment, create MongoDB commands to do the following:
-   + Create a new entry into the database, which already has your 10 initial entries
-   + Get the password associated with the URL of one of your 10 entries
-   + Get all the password-related data, including the password, associated with URLs that have `https` in one of your 10 entries
-   + Change a URL associated with one of the passwords in your 10 entries
-   + Change any entry’s password
-   + Remove a password
+   + Create a new entry into the database, which already has your 10 initial entries |DONE
+   + Get the password associated with the URL of one of your 10 entries |DONE
+   + Get all the password-related data, including the password, associated with URLs that have `https` in one of your 10 entries |DONE
+   + Change a URL associated with one of the passwords in your 10 entries |DONE
+   + Change any entry’s password |DONE
+   + Remove a password |DONE
 
 ---
 
