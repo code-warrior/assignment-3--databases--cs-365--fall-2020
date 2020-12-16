@@ -1,0 +1,53 @@
+// Create a new entry into the database
+db.thePasswordsCollection.insertOne({
+	website : {
+		webURL : "netflix.com",
+		webName : "Netflix",
+		webSSL : "Http"
+	},
+	user : {
+		user_id : 1,
+		firstName : "Jeff",
+		lastName : "Sanches",
+		email : "sanches1234@gmail.com",
+		username : "sanches1234",
+		password : "B67!hx6@fr33"
+	},
+	account : {
+		account_id : 1,
+		createdAt : ISODate() 
+	},
+	comment : { 
+		commentText : "Time to start binge watching The Flash"
+	}
+})
+
+//Get a password associated with the URL of one of the 10 entries
+db.thePasswordsCollection.aggregate([
+	{ $match: {"website.webURL" : "twitter.com"}},
+	{ $project: {"website.webURL" : 1, "user.password" : 1, _id : 0}}
+]).pretty()
+
+//Get all password-related data, including the password, associated with URLs that have https
+db.thePasswordsCollection.aggregate([
+	{ $match: {"website.webSSL" : "Https"}},
+	{ $project: {"website.webName" : 1, "website.webSSL" : 1, "user.username" : 1, "user.password" : 1, _id : 0}}
+]).pretty()
+
+//Change a URL associated with one of the passwords
+db.thePasswordsCollection.updateMany(
+	{ "user.password" : "QLSD3456!@H!"},
+	{ $set: { "website.webURL" : "hulu.com", "website.webName" : "Hulu"}}
+)
+
+//Change an entry's password
+db.thePasswordsCollection.updateMany(
+	{ "website.webName" : "Amazon"},
+	{ $set: { "user.password" : "U619bbRf$$@b3"}}
+)
+
+//Remove a password
+db.thePasswordsCollection.updateMany(
+	{ "website.webName" : "Sony Playstation"},
+	{ $set: { "user.password" : null}}
+)
